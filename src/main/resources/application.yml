@@ -1,0 +1,46 @@
+spring:
+  application:
+    name: oxima-location-tracker
+    websocket:
+      enabled: true
+
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/oxima_db
+      # alternatively:
+      # host: localhost
+      # port: 27017
+      # database: oxima_db
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: vivekvbgm@gmail.com
+    password: qrdo pvrs ryok npuz
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+#  kafka:
+#    bootstrap-servers: localhost:9092
+#    consumer:
+#      group-id: location-group
+#      auto-offset-reset: latest
+#      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#    producer:
+#      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+#      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+
+logging:
+  level:
+    org.springframework.kafka: INFO
+    org.apache.kafka: INFO
+    org.mongodb.driver: INFO
+
+razorpay:
+  key: rzp_test_YA24Th3tm6croN
+  secret: jvYSrOhKG8dZ9TPFMZnEX4Hh
